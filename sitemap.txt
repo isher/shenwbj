@@ -211,6 +211,7 @@ https://swbj.qsis.cn/tag/个人成长/index.html
 https://swbj.qsis.cn/tag/中国大陆法律/index.html
 https://swbj.qsis.cn/tag/中国移动/index.html
 https://swbj.qsis.cn/tag/中考/index.html
+https://swbj.qsis.cn/tag/乔硕/index.html
 https://swbj.qsis.cn/tag/乔说/index.html
 https://swbj.qsis.cn/tag/书法/index.html
 https://swbj.qsis.cn/tag/书画/index.html
@@ -345,6 +346,7 @@ https://swbj.qsis.cn/tag/打卡/index.html
 https://swbj.qsis.cn/tag/打破常规/index.html
 https://swbj.qsis.cn/tag/拜登/index.html
 https://swbj.qsis.cn/tag/换位思考/index.html
+https://swbj.qsis.cn/tag/政策/index.html
 https://swbj.qsis.cn/tag/政策金房暖通/index.html
 https://swbj.qsis.cn/tag/教师/index.html
 https://swbj.qsis.cn/tag/文化艺术/index.html
@@ -357,6 +359,8 @@ https://swbj.qsis.cn/tag/格物思理/index.html
 https://swbj.qsis.cn/tag/格物思理/page/2/index.html
 https://swbj.qsis.cn/tag/格物思理/page/3/index.html
 https://swbj.qsis.cn/tag/格物思理/page/4/index.html
+https://swbj.qsis.cn/tag/格物思理/page/5/index.html
+https://swbj.qsis.cn/tag/格物思理/page/6/index.html
 https://swbj.qsis.cn/tag/樊登读书会/index.html
 https://swbj.qsis.cn/tag/欺诈/index.html
 https://swbj.qsis.cn/tag/歌曲/index.html
@@ -402,6 +406,7 @@ https://swbj.qsis.cn/tag/社会/index.html
 https://swbj.qsis.cn/tag/社会/page/2/index.html
 https://swbj.qsis.cn/tag/社会/page/3/index.html
 https://swbj.qsis.cn/tag/社会/page/4/index.html
+https://swbj.qsis.cn/tag/社会/page/5/index.html
 https://swbj.qsis.cn/tag/社会博弈/index.html
 https://swbj.qsis.cn/tag/社会观察/index.html
 https://swbj.qsis.cn/tag/社会观察/page/2/index.html
@@ -479,6 +484,7 @@ https://swbj.qsis.cn/tag/迭代认知/index.html
 https://swbj.qsis.cn/tag/道路交通安全法实施条例/index.html
 https://swbj.qsis.cn/tag/遗憾/index.html
 https://swbj.qsis.cn/tag/避坑/index.html
+https://swbj.qsis.cn/tag/金房暖通/index.html
 https://swbj.qsis.cn/tag/金钱/index.html
 https://swbj.qsis.cn/tag/钱/index.html
 https://swbj.qsis.cn/tag/长期心智/index.html
