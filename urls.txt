@@ -165,6 +165,8 @@ https://swbj.qsis.cn/contact.html
 https://swbj.qsis.cn/helloQsis.html
 https://swbj.qsis.cn/jiehuo.html.html
 https://swbj.qsis.cn/liuyan.html
+https://swbj.qsis.cn/privacy-cn.html.html
+https://swbj.qsis.cn/privacy-en.html.html
 https://swbj.qsis.cn/qiaoshuo.html
 https://swbj.qsis.cn/qsiscms.html
 https://swbj.qsis.cn/search.html

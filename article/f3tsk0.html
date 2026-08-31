@@ -216,7 +216,128 @@ document.addEventListener('DOMContentLoaded', function(){
 <a href="https://swbj.qsis.cn" target="_blank">深悟笔记工作室</a>
 <br>Powered by <a href="https://cms.qsis.cn" target="_blank">Qsis.CMS - SSG</a>. Designed & Developed by 
 <a href="https://swbj.qsis.cn/qiaoshuo.html" target="_blank">乔硕isher</a> 
-<a href="https://qsis.cn/download.html" target="_blank">程序下载</a><br><a href="http://beian.qsis.cn">京ICP备2021005632号</a></p>
+<a href="https://qsis.cn/download.html" target="_blank">程序下载</a><br><a href="http://beian.qsis.cn">京ICP备2021005632号</a> <a href="https://swbj.qsis.cn/privacy-cn.html">隐私政策</a>/<a href="https://swbj.qsis.cn/privacy-en.html">Privacy Policy</a>
+
+<style>
+/* Cookie弹窗 底部滑入 */
+#cookieConsentWrap{
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index:9999;
+    padding:16px;
+    background:#ffffff;
+    box-shadow:0 -2px 14px rgba(0,0,0,0.12);
+    transform: translateY(100%);
+    transition: transform 0.4s ease-out;
+}
+#cookieConsentWrap.show{
+    transform: translateY(0);
+}
+.cookie-inner{
+    max-width:1100px;
+    margin:0 auto;
+}
+.cookie-title{
+    font-size:16px;
+    font-weight:600;
+    margin:0 0 8px 0;
+}
+.cookie-desc{
+    font-size:14px;
+    color:#444;
+    line-height:1.6;
+    margin:0 0 14px 0;
+}
+.cookie-desc a{
+    color:#0052cc;
+    text-decoration:underline;
+}
+.cookie-btn-group{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+.cookie-btn{
+    padding:9px 20px;
+    border-radius:6px;
+    border:none;
+    font-size:14px;
+    cursor:pointer;
+}
+.btn-accept{
+    background:#222;
+    color:#fff;
+}
+.btn-reject{
+    background:#eeeeee;
+    color:#333;
+}
+</style>
+
+<div id="cookieConsentWrap">
+    <div class="cookie-inner">
+        <div class="cookie-title">Cookie 使用提示</div>
+        <div class="cookie-desc">
+            本站使用Cookie用于网站体验优化与谷歌广告投放。继续使用网站即代表您同意相关技术。您可以查阅<a href="https://swbj.qsis.cn/privacy">隐私政策</a>了解详情，也可随时在浏览器设置关闭Cookie。
+        </div>
+        <div class="cookie-btn-group">
+            <button class="cookie-btn btn-accept" id="acceptCookie">全部同意</button>
+            <button class="cookie-btn btn-reject" id="rejectCookie">拒绝非必要Cookie</button>
+        </div>
+    </div>
+</div>
+
+<script>
+// Google Consent Mode v2 适配，AdSense合规
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+
+const consentKey = "site_cookie_consent";
+const banner = document.getElementById('cookieConsentWrap');
+const acceptBtn = document.getElementById('acceptCookie');
+const rejectBtn = document.getElementById('rejectCookie');
+
+//读取本地保存的选择
+let saved = localStorage.getItem(consentKey);
+
+function setConsent(adStorage, analyticsStorage){
+    gtag('consent', 'update', {
+        ad_storage: adStorage,
+        analytics_storage: analyticsStorage
+    });
+    localStorage.setItem(consentKey, JSON.stringify({adStorage,analyticsStorage,expire:Date.now()+180*86400*1000}));
+    banner.classList.remove('show');
+}
+
+if(!saved){
+    //没有做过选择，弹出底部弹窗
+    setTimeout(()=>{
+        banner.classList.add('show');
+    },600);
+    //初始化默认拒绝广告存储
+    gtag('consent', 'default', {
+        ad_storage: 'denied',
+        analytics_storage: 'denied',
+        wait_for_update: 500
+    });
+}else{
+    let obj = JSON.parse(saved);
+    gtag('consent', 'default', {
+        ad_storage: obj.adStorage,
+        analytics_storage: obj.analyticsStorage,
+        wait_for_update:500
+    });
+}
+
+acceptBtn.onclick = function(){
+    setConsent('granted','granted');
+};
+rejectBtn.onclick = function(){
+    setConsent('denied','denied');
+};
+</script></p>
   </div>
 </div>
 
