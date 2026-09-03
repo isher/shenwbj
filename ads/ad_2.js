@@ -9,7 +9,7 @@
     const article_ad_enable = false;
     const ad_enable = true;
     const ad_scope = "both";
-    const ad_html = "<script async src=\"https:\/\/pagead2.googlesyndication.com\/pagead\/js\/adsbygoogle.js?client=ca-pub-3637491388974545\"\r\n     crossorigin=\"anonymous\"><\/script>\r\n<!-- side-swbj -->\r\n<ins class=\"adsbygoogle\"\r\n     style=\"display:block\"\r\n     data-ad-client=\"ca-pub-3637491388974545\"\r\n     data-ad-slot=\"4816082053\"\r\n     data-ad-format=\"auto\"\r\n     data-full-width-responsive=\"true\"><\/ins>\r\n<script>\r\n     (adsbygoogle = window.adsbygoogle || []).push({});\r\n<\/script>";
+    const ad_html = "<!-- side-swbj -->\r\n<ins class=\"adsbygoogle\"\r\n     style=\"display:block\"\r\n     data-ad-client=\"ca-pub-3637491388974545\"\r\n     data-ad-slot=\"4816082053\"\r\n     data-ad-format=\"auto\"\r\n     data-full-width-responsive=\"true\"><\/ins>\r\n<script>\r\n     (adsbygoogle = window.adsbygoogle || []).push({});\r\n<\/script>";
 
     if(!ad_all_enable){
         return;
