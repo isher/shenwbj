@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>专栏：固化思维-深悟笔记｜原创文章站</title>
     <meta name="renderer" content="webkit">
     <meta name="format-detection" content="email=no">
     <meta name="format-detection" content="telephone=no">
 <link rel="canonical" href="https://swbj.qsis.cn/tag/固化思维/index.html">
+<meta property="og:url" content="https://swbj.qsis.cn/tag/固化思维/index.html">
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <link rel="alternate" type="application/rss+xml" href="https://swbj.qsis.cn/rss.xml" title="深悟笔记 RSS 订阅">
     <meta http-equiv="Cache-Control" content="no-siteapp">
-
+<meta name="application-name" content="深悟笔记｜原创文章站" />
+<meta property="og:site_name" content="深悟笔记｜原创文章站">
     <link rel="icon" type="image/png" href="https://swbj.qsis.cn/upload/images/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta http-equiv="x-dns-prefetch-control" content="on">
     <meta name="site" content="https://swbj.qsis.cn">
     <meta property="og:image" content="/upload/images/favicon.ico">
-    <link rel="stylesheet" href="https://swbj.qsis.cn/files/theme/Qsis_swbj/style.css">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="深悟笔记｜原创文章站"/>
+            <link rel="stylesheet" href="https://swbj.qsis.cn/files/theme/Qsis_swbj/style.css">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -57,7 +57,6 @@
 -->
 <meta name="viewport" content="width=device-width,initial-scale=1"/><link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/Swiper/8.4.7/swiper-bundle.min.css">
 <script src="https://cdn.bootcdn.net/ajax/libs/Swiper/8.4.7/swiper-bundle.min.js"></script>
-
 <script>
 document.addEventListener('DOMContentLoaded', function(){
   new Swiper('.swiper-container', {
@@ -67,9 +66,8 @@ document.addEventListener('DOMContentLoaded', function(){
   });
 });
 </script>
-
-
 </head>
+
 <body>
 
 <!-- 顶部导航 -->
@@ -184,8 +182,7 @@ document.addEventListener('DOMContentLoaded', function(){
 	
 	
   <div class="container">
-    <p>Copyright©2016‑2026.　All Rights Reserved.
-<a href="https://swbj.qsis.cn" target="_blank">深悟笔记工作室</a>
+    <p>Copyright©2016‑2026. <a href="https://swbj.qsis.cn" target="_blank">深悟笔记</a> All Rights Reserved.
 <br>Powered by <a href="https://cms.qsis.cn" target="_blank">Qsis.CMS - SSG</a>. Designed & Developed by 
 <a href="https://swbj.qsis.cn/qiaoshuo.html" target="_blank">乔硕isher</a> 
 <a href="https://qsis.cn/download.html" target="_blank">程序下载</a><br><a href="http://beian.qsis.cn">京ICP备2021005632号</a> <a href="https://swbj.qsis.cn/privacy-cn.html">隐私政策</a>/<a href="https://swbj.qsis.cn/privacy-en.html">Privacy Policy</a>
@@ -266,15 +263,25 @@ document.addEventListener('DOMContentLoaded', function(){
 // Google Consent Mode v2 适配，AdSense合规
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
-
 const consentKey = "site_cookie_consent";
 const banner = document.getElementById('cookieConsentWrap');
 const acceptBtn = document.getElementById('acceptCookie');
 const rejectBtn = document.getElementById('rejectCookie');
 
+// 【新增】根据授权状态动态加载广告脚本
+function loadAdScripts(adStorageGranted){
+    if(!adStorageGranted){
+        // 拒绝：什么都不做，不加载广告js
+        return;
+    }
+    // 同意：动态创建script，加载ad_1.js
+    const adScript = document.createElement('script');
+    adScript.src = "https://swbj.qsis.cn/ads/ad_1.js";
+    document.body.appendChild(adScript);
+}
+
 //读取本地保存的选择
 let saved = localStorage.getItem(consentKey);
-
 function setConsent(adStorage, analyticsStorage){
     gtag('consent', 'update', {
         ad_storage: adStorage,
@@ -282,6 +289,8 @@ function setConsent(adStorage, analyticsStorage){
     });
     localStorage.setItem(consentKey, JSON.stringify({adStorage,analyticsStorage,expire:Date.now()+180*86400*1000}));
     banner.classList.remove('show');
+    // 用户点击按钮保存设置之后，执行广告加载判断
+    loadAdScripts(adStorage === 'granted');
 }
 
 if(!saved){
@@ -302,6 +311,8 @@ if(!saved){
         analytics_storage: obj.analyticsStorage,
         wait_for_update:500
     });
+    // 页面刷新：读取历史保存，决定是否加载广告
+    loadAdScripts(obj.adStorage === 'granted');
 }
 
 acceptBtn.onclick = function(){
@@ -310,6 +321,7 @@ acceptBtn.onclick = function(){
 rejectBtn.onclick = function(){
     setConsent('denied','denied');
 };
+
 </script>
 <script>
 var _hmt = _hmt || [];
