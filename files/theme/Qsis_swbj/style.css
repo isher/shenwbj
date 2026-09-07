@@ -4,7 +4,11 @@ body{background:#FCFBF8;color:#333;line-height:1.8}
 a{text-decoration:none;color:inherit}
 ul{list-style:none}
 .container{width:100%;max-width:1200px;margin:0 auto;padding:0 15px}
-
+span[title] {
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-left: 6px;
+}
 /* 顶部导航 */
 .header-top{background:#6B8088;line-height:38px;color:#fff;font-size:0.75rem}
 .header-top .container{display:flex;justify-content:space-between}
@@ -261,6 +265,7 @@ ul{list-style:none}
 .rate {
     line-height: 40px;
     padding-bottom: 25px;
+    cursor: help;
 }
 .article-content{font-size:1rem;color:#444;line-height:1.9}
 .article-content p{text-align:justify;text-indent: 2em;margin-bottom: 22px !important;line-height: 30px;}

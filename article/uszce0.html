@@ -130,7 +130,10 @@ iptable配置黑名单-内网访问封禁外部网址      	</h1>
     <button id="toggle-speech">▶️</button>
     <label for="rate-control">语速：</label>
     <input type="range" id="rate-control" min="0.1" max="2" step="0.1" value="1">
-    <span id="rate-value">1</span>
+    <span id="rate-value">1</span> <span title="
+    	阅读功能依靠调用 TTS 系统开放接口，支持
+    	安卓、iOS、Windows、Linux 几乎所有系统，
+    	鸿蒙系统无法语音阅读请联系手机售后。"> ❓ </span>
 </div>
       <div id="article-content" class="article-content">
  <p class="ql-align-justify"><span style="color: rgb(51, 51, 51);">iptables -I FORWARD -m iprange --src-range 192.168.0.100-192.168.0.149 -m string --string "baidu.com" --algo kmp -j DROP</span></p><p class="ql-align-justify"><span style="color: rgb(51, 51, 51);">iptables -I FORWARD -m iprange --src-range 192.168.0.100-192.168.0.149 -m string --string "baidu.com" --algo&nbsp;bm -j DROP</span></p><p class="ql-align-justify"><span style="color: rgb(51, 51, 51);">192.168.0.100至192.168.0.149，是指定IP范围</span></p><p class="ql-align-justify"><span style="color: rgb(51, 51, 51);">"baidu.com"需要禁止访问的网站</span></p>      </div>
