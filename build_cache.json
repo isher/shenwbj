@@ -1,5 +1,6 @@
 {
     "posts_file_hash": {
+        "c5d3fe": "dc9fce67528b303ae312caeb070632e2302264dd7ddb04364f68420f6f1772c9",
         "3ugiu0": "8c3b1618981b044d93596d7353ba5b5bb22287ebdbb78bac8df4e03a2996196b",
         "ijw6n3": "d5a8978b7fdd874a37f716fb1c5a3d79f3d21e517505bb026208647760d559bd",
         "ngapzb": "ea91dedbd39d5538f37ca28e628f12e9adb2ef8e8b408bbc9612ee3696722e29",
@@ -186,9 +187,10 @@
         "qsiscms": "e26c5ae60407ecf38d84df47e52b6a2150886a4c669ea8913691f1d51761ee47",
         "search": "cd647c3b022598efda94b10eef425e8b33998022a918eb9d67e1e8fd4f5dc6cd",
         "service": "c9951cea490bc0c6a8c33a8e551a05a9ebae0ec1b71c9a5e62c998ba8194d90f",
-        "shenwubiji": "183a965fd2e22b3c7c53661f4e9537e96a9c301885d9e0d492b988ce92b95526",
+        "shenwubiji": "54a506c69bc17bbfa8e033583f1bb3211333da11acecbb8524ea6b6bd199b9e9",
         "ty": "308a433ea412025c1a6663965c8bf9ad0afa0a864800fbd33874a0f69f309b17",
         "v": "caf22dfc157ca0adca5ad8222c7341dccba6b9f3c5a2a32c0a4b13f0c9abd613",
+        "whydoswbj": "c550aab3db3f161879ab5e24dba49d9f4c0a74cfbce2b45f0cb1930fec98875a",
         "yiyao": "318259b41496549188f7e234b3e86b060cc9c8fd2110143d6a58d94939030e6d"
     },
     "template_hash": {
@@ -204,6 +206,16 @@
     "ads_config_file_hash": "96b8aadbc48cf5ea8ab602cdf0a708de6a7f350417b3ab3e630af11e1b6d27d6",
     "qc_config_file_hash": "2dcf507db145498303bc0e9493752a69289743581fb9d207c5edd0f776f35d6a",
     "static_config_file_hash": "bac1c0dc210755f9b9735c81f363811c477957f4b55508f8bef8e7a20bae7bdf",
-    "refresh_categories": [],
-    "refresh_tags": []
+    "refresh_categories": [
+        "article",
+        "page",
+        "page"
+    ],
+    "refresh_tags": [
+        "实操方略",
+        "职场",
+        "职场故事",
+        "人力资源",
+        "领导力"
+    ]
 }
