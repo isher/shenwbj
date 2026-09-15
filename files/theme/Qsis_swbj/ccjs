@@ -1,0 +1,415 @@
+<style>
+/* ========== 底部主横幅弹窗 ========== */
+#cookieConsentWrap {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99999;
+    padding: 24px 20px;
+    background: #ffffff;
+    box-shadow: 0 -2px 12px rgba(0,0,0,0.15);
+    transform: translateY(100%);
+    transition: transform 0.35s ease-out;
+}
+#cookieConsentWrap.show {
+    transform: translateY(0);
+}
+.cookie-inner {
+    max-width: 1260px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap:24px;
+    align-items:flex-start;
+}
+.cookie-text-block{
+    font-size:14px;
+    color:#222;
+    line-height:1.65;
+}
+.cookie-title{
+    font-size:22px;
+    font-weight:600;
+    margin:0 0 10px 0;
+}
+.cookie-text-block a{
+    color:#0052cc;
+    text-decoration:underline;
+}
+.cookie-btn-group{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    min-width:140px;
+}
+.cookie-btn{
+    padding:11px 16px;
+    border:none;
+    font-size:15px;
+    cursor:pointer;
+    border-radius:2px;
+}
+.btn-accept{
+    background:#0078d4;
+    color:#fff;
+}
+.btn-reject-all{
+    background:#0078d4;
+    color:#fff;
+}
+.btn-manage{
+    background:transparent;
+    color:#0052cc;
+    text-align:right;
+    padding:4px 0;
+}
+/*移动端布局*/
+@media(max-width:768px){
+    .cookie-inner{
+        grid-template-columns: 1fr;
+    }
+    .cookie-btn-group{
+        flex-direction:row;
+        flex-wrap:wrap;
+    }
+}
+
+/* ========== 管理首选项 模态弹窗 ========== */
+#cookieSettingModal{
+    position:fixed;
+    inset:0;
+    z-index:100000;
+    background:rgba(0,0,0,0.45);
+    display:none;
+    align-items:center;
+    justify-content:center;
+}
+#cookieSettingModal.open{
+    display:flex;
+}
+.modal-container{
+    width:620px;
+    max-height:85vh;
+    background:#fff;
+    border-radius:4px;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+}
+.modal-head{
+    padding:20px 24px;
+    border-bottom:1px solid #eee;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.modal-title{
+    font-size:18px;
+    font-weight:600;
+    margin:0;
+}
+.modal-close{
+    background:none;
+    border:none;
+    font-size:22px;
+    cursor:pointer;
+    color:#666;
+}
+.modal-body{
+    padding:16px 24px;
+    overflow-y:auto;
+    flex:1;
+}
+.cookie-category-item{
+    border-bottom:1px solid #eeeeee;
+}
+.cat-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:14px 0;
+    cursor:pointer;
+}
+.cat-name{
+    font-size:15px;
+}
+.cat-toggle-switch{
+    position:relative;
+    width:42px;
+    height:22px;
+}
+.cat-toggle-switch input{
+    opacity:0;
+    width:0;
+    height:0;
+}
+.slider{
+    position:absolute;
+    cursor:pointer;
+    inset:0;
+    background:#cccccc;
+    border-radius:22px;
+    transition:.2s;
+}
+.slider:before{
+    position:absolute;
+    content:"";
+    height:16px;
+    width:16px;
+    left:3px;
+    bottom:3px;
+    background:white;
+    border-radius:50%;
+    transition:.2s;
+}
+input:checked + .slider{
+    background:#0078d4;
+}
+input:checked + .slider:before{
+    transform:translateX(20px);
+}
+.cat-desc{
+    font-size:13px;
+    color:#555;
+    line-height:1.55;
+    padding:0 0 14px 0;
+    display:none;
+}
+.cat-desc.show{
+    display:block;
+}
+.modal-footer{
+    padding:18px 24px;
+    border-top:1px solid #eee;
+    display:flex;
+    justify-content:flex-end;
+    gap:12px;
+}
+</style>
+
+<!-- 底部横幅主弹窗 -->
+<div id="cookieConsentWrap">
+    <div class="cookie-inner">
+        <div class="cookie-text-block">
+            <div class="cookie-title">微软重视您的隐私</div>
+            <p>本站和第三方供应商使用 Cookie 存储访问唯一ID、个人信息，用于提供、维护、改进服务与广告。
+                如果您同意，本站将个性化展示内容与广告。
+                您可以选择“我接受”同意全部用途，或单击“管理首选项”查看选项。
+                可随时在管理首选项中撤回同意。
+                <a href="/privacy-cn.html">隐私政策</a>
+            </p>
+        </div>
+        <div class="cookie-btn-group">
+            <button class="cookie-btn btn-accept" id="acceptAllBtn">我接受</button>
+            <button class="cookie-btn btn-reject-all" id="rejectAllBtn">全部拒绝</button>
+            <button class="cookie-btn btn-manage" id="openSettingBtn">管理首选项</button>
+        </div>
+    </div>
+</div>
+
+<!-- 管理首选项独立模态弹窗 -->
+<div id="cookieSettingModal">
+    <div class="modal-container">
+        <div class="modal-head">
+            <h3 class="modal-title">关于你的隐私</h3>
+            <button class="modal-close" id="closeModal">×</button>
+        </div>
+        <div class="modal-body">
+            <p>我们处理你的数据提供内容广告，衡量投放效果，基于合法利益与合作伙伴共享信息。</p>
+
+            <div class="cookie-category-item">
+                <div class="cat-header" data-target="desc1">
+                    <span class="cat-name">社交媒体 Cookie</span>
+                    <label class="cat-toggle-switch">
+                        <input type="checkbox" id="cat_social">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="cat-desc" id="desc1">用于社交媒体功能、分享组件</div>
+            </div>
+
+            <div class="cookie-category-item">
+                <div class="cat-header" data-target="desc2">
+                    <span class="cat-name">播放 Cookie</span>
+                    <label class="cat-toggle-switch">
+                        <input type="checkbox" id="cat_play">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="cat-desc" id="desc2">视频播放相关统计Cookie</div>
+            </div>
+
+            <div class="cookie-category-item">
+                <div class="cat-header" data-target="desc3">
+                    <span class="cat-name">第三方分析</span>
+                    <label class="cat-toggle-switch">
+                        <input type="checkbox" id="cat_analytic">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="cat-desc" id="desc3">网站访问统计，用户行为分析</div>
+            </div>
+
+            <div class="cookie-category-item">
+                <div class="cat-header" data-target="desc4">
+                    <span class="cat-name">在设备上存储或访问信息</span>
+                    <label class="cat-toggle-switch">
+                        <input type="checkbox" id="cat_storage">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="cat-desc" id="desc4">在设备存储读取标识符等信息</div>
+            </div>
+
+            <div class="cookie-category-item">
+                <div class="cat-header" data-target="desc5">
+                    <span class="cat-name">个性化广告和内容</span>
+                    <label class="cat-toggle-switch">
+                        <input type="checkbox" id="cat_ad">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="cat-desc" id="desc5">投放个性化广告，广告效果衡量</div>
+            </div>
+
+            <div class="cookie-category-item">
+                <div class="cat-header" data-target="desc6">
+                    <span class="cat-name">使用精确的地理位置数据</span>
+                    <label class="cat-toggle-switch">
+                        <input type="checkbox" id="cat_geo">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <div class="cat-desc" id="desc6">获取设备地理位置用于广告与内容</div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="cookie-btn btn-reject-all" id="modalRejectAll">全部拒绝</button>
+            <button class="cookie-btn btn-accept" id="modalConfirm">确认我的选择</button>
+        </div>
+    </div>
+</div>
+
+
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+const consentKey = "site_cookie_consent";
+
+// DOM元素
+const banner = document.getElementById('cookieConsentWrap');
+const modal = document.getElementById('cookieSettingModal');
+const openSettingBtn = document.getElementById('openSettingBtn');
+const closeModalBtn = document.getElementById('closeModal');
+
+const acceptAllBtn = document.getElementById('acceptAllBtn');
+const rejectAllBtn = document.getElementById('rejectAllBtn');
+const modalRejectAll = document.getElementById('modalRejectAll');
+const modalConfirm = document.getElementById('modalConfirm');
+
+// 类别开关
+const catSocial = document.getElementById('cat_social');
+const catPlay = document.getElementById('cat_play');
+const catAnalytic = document.getElementById('cat_analytic');
+const catStorage = document.getElementById('cat_storage');
+const catAd = document.getElementById('cat_ad');
+const catGeo = document.getElementById('cat_geo');
+
+// 【原有逻辑】根据授权加载广告脚本
+function loadAdScripts(adStorageGranted){
+    if(!adStorageGranted){
+        return;
+    }
+    const adScript = document.createElement('script');
+    adScript.src = "https://swbj.qsis.cn/ads/ad_1.js";
+    document.body.appendChild(adScript);
+}
+
+// 更新gtag consent、本地存储、关闭弹窗
+function setConsent(adStorage, analyticsStorage){
+    gtag('consent', 'update', {
+        ad_storage: adStorage,
+        analytics_storage: analyticsStorage
+    });
+    localStorage.setItem(consentKey, JSON.stringify({
+        adStorage,
+        analyticsStorage,
+        expire: Date.now() + 180 * 86400 * 1000
+    }));
+    banner.classList.remove('show');
+    modal.classList.remove('open');
+    loadAdScripts(adStorage === 'granted');
+}
+
+// 打开设置面板
+openSettingBtn.addEventListener('click', ()=>{
+    modal.classList.add('open');
+});
+//关闭设置面板
+closeModalBtn.addEventListener('click', ()=>{
+    modal.classList.remove('open');
+});
+//点击遮罩关闭
+modal.addEventListener('click',(e)=>{
+    if(e.target === modal){
+        modal.classList.remove('open');
+    }
+});
+
+// 展开/收起分类描述
+document.querySelectorAll('.cat-header').forEach(item=>{
+    item.addEventListener('click',(ev)=>{
+        const targetId = ev.currentTarget.dataset.target;
+        const descDom = document.getElementById(targetId);
+        descDom.classList.toggle('show');
+    })
+})
+
+// 1.主弹窗：我接受全部
+acceptAllBtn.onclick = function(){
+    setConsent('granted','granted');
+}
+//2.主弹窗：全部拒绝
+rejectAllBtn.onclick = function(){
+    setConsent('denied','denied');
+}
+//3.模态弹窗内：全部拒绝
+modalRejectAll.onclick = function(){
+    catSocial.checked = false;
+    catPlay.checked = false;
+    catAnalytic.checked = false;
+    catStorage.checked = false;
+    catAd.checked = false;
+    catGeo.checked = false;
+    setConsent('denied','denied');
+}
+//4.模态弹窗：确认我的选择
+modalConfirm.onclick = function(){
+    const adStorage = (catAd.checked || catAnalytic.checked) ? 'granted':'denied';
+    const analyticsStorage = catAnalytic.checked ? 'granted':'denied';
+    setConsent(adStorage, analyticsStorage);
+}
+
+//读取本地保存
+let saved = localStorage.getItem(consentKey);
+if(!saved){
+    //无记录，弹出底部横幅
+    setTimeout(()=>{
+        banner.classList.add('show');
+    },600);
+    gtag('consent', 'default', {
+        ad_storage: 'denied',
+        analytics_storage: 'denied',
+        wait_for_update: 500
+    });
+}else{
+    let obj = JSON.parse(saved);
+    gtag('consent', 'default', {
+        ad_storage: obj.adStorage,
+        analytics_storage: obj.analyticsStorage,
+        wait_for_update:500
+    });
+    loadAdScripts(obj.adStorage === 'granted');
+}
+</script>
