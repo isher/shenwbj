@@ -1,6 +1,6 @@
 {
     "posts_file_hash": {
-        "b6cod2": "76128d3e41264801e4fbc8256c5aaa2624f89d1faa25a5380e82449f5675c0f0",
+        "b6cod2": "3d3fffbe0b9f15e97fb274d55b825201b9761c50a2df2cc8f4c6aa521af3bf0c",
         "5he6st": "18b9ff5dc85a2096090a60d24200a0ec359d74d39556971f6fd5c0b510d66c67",
         "xacxqr": "821495a4ad8eb95b4c536b53736a02be768fab16b2bb67d4a184f0915afacbbd",
         "cauogf": "d0fbe1e4d7e3d6651a0879132c8f843819469990032636dace1f55d76d8357ff",
@@ -209,8 +209,6 @@
     "ads_config_file_hash": "96b8aadbc48cf5ea8ab602cdf0a708de6a7f350417b3ab3e630af11e1b6d27d6",
     "qc_config_file_hash": "4da7708d0396b4b726c1b46c981421aff156864cf32e9aef3021e1d7f73576ea",
     "static_config_file_hash": "73f368b3663ce85cc3d516c0df35d7d286527327514569feab1f95119c0bfa8f",
-    "refresh_categories": [
-        "article"
-    ],
+    "refresh_categories": [],
     "refresh_tags": []
 }
