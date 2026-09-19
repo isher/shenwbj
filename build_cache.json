@@ -1,7 +1,7 @@
 {
     "posts_file_hash": {
         "o5xdzi": "37821b6da994c292b9c7efe777d76d066f94e419ca88a8f993be22e596a847e7",
-        "pkcjcc": "fcb82aedf13299db1ab95c641dbd37961fd808544275754fd1c41edacc6dda1b",
+        "pkcjcc": "cdbbf676dd1815461dd1ceb8d9ceb932cd21187767be425c1b1e75b9465e96b6",
         "b6cod2": "3d3fffbe0b9f15e97fb274d55b825201b9761c50a2df2cc8f4c6aa521af3bf0c",
         "5he6st": "18b9ff5dc85a2096090a60d24200a0ec359d74d39556971f6fd5c0b510d66c67",
         "xacxqr": "821495a4ad8eb95b4c536b53736a02be768fab16b2bb67d4a184f0915afacbbd",
@@ -14,7 +14,7 @@
         "xvvfis": "090296aecae7ea6886acbc2075bb574a4a70450843df84796071e6720b3b4c86",
         "yd1szg": "1ed8f9835fb1cc1edec4e002ca79e3d9694a1b568067fdb088641483f79a89b2",
         "yu3q5o": "cc43971409cd53ad91143d23b6621ae38e889f7cc8e2d6a0bfe50ca14d65c1a0",
-        "0l0nob": "557d940e45cc65e9c344447cdaea89c3c48cf95532a5bea5e46c7c4c76d7e786",
+        "0l0nob": "041549e21df7fee5fe3f6fb3f966a4910783417e4b85bc28a87c230fddf796a5",
         "dxggls": "2c45666da0c4a9f6f958465772e3d0b9857c64736e6512e3d1510b3f6cae17ac",
         "quapal": "daa797468dc3347051128f8bef0a17b978e482da64312e479b10b87b34a6750b",
         "0vdinx": "c359db848018cdd52a2f2c5b472ef618d079a9e1a85df9887686cf8942176296",
@@ -26,12 +26,12 @@
         "b6wdkg": "7011a1567839453c763384b4d26adb729b42b56c98ce0a5965f720cacde5edbc",
         "e0flq6": "c104fd2c29132eb9cd0f78d4ecdaae5c350bb509ab507da5df09f807da8c9db3",
         "ufm1xi": "6177e44ac118f282dd21e063107fbd0edea31b8d6b3a1d5ea0a2f39ad97a04af",
-        "5cmhdb": "942ed1ac2d42031f158a7560bcd3e4c59fb79529c28e7c4539f86f38d2a32072",
+        "5cmhdb": "2988f1ee39dd38e7a4d7b8068c3407d68097d63411985472449a7a1af02ce7c4",
         "bd3cm5": "0b04a15450ed7fbdda9a5136a35b1e8562e2a393aa10d925d7d5cb1e102ea2f3",
         "hrmp55": "4acdfa8fda6fde41e4dea30605ebf6f19fdef08a7c895db133bf1c89290dc29b",
         "2p0cp3": "d4e7f38004878dcecbf2e75fbeb8e783eb7b8bb536af96818cc6d2e32c00bc97",
         "z0rmuw": "3dc7fa9bf4e131d6e5d2eb382a418a92b4dcef44c701639078a79ffa1c9fef7d",
-        "1m5u2h": "a1c4dd9ddfa5dc6aba3744da5481c0d265cdeba996b06f1f2fabbabc3f8f29a0",
+        "1m5u2h": "3d0cf52292cc4b8660b405921d3739636fd5485ee03c663a9d88792ea4433283",
         "yajmxu": "63f35227b4442e7d0f7ffc1b1a4acb86811ebfb5de1b6f3829f45cc5a364d00b",
         "ek53mj": "333534d8dc0e9cbbdbf6c3965c35634d6dc2f83de730ca4dc2cf9fd6863f2b67",
         "w4myvn": "cd1b9f18e9f5c85280981afb76af50d6729c9314e79251a8147fd874c6918ae9",
@@ -211,17 +211,6 @@
     "ads_config_file_hash": "96b8aadbc48cf5ea8ab602cdf0a708de6a7f350417b3ab3e630af11e1b6d27d6",
     "qc_config_file_hash": "cf7843a3c9c5ccec41fe939314a619793e40d900516be109446d385fb460f918",
     "static_config_file_hash": "73f368b3663ce85cc3d516c0df35d7d286527327514569feab1f95119c0bfa8f",
-    "refresh_categories": [
-        "article"
-    ],
-    "refresh_tags": [
-        "格物思理",
-        "中年觉醒",
-        "生命无常",
-        "身份解绑",
-        "自我释放",
-        "世俗规训",
-        "迟来心意",
-        "向内取悦"
-    ]
+    "refresh_categories": [],
+    "refresh_tags": []
 }
