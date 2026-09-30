@@ -1,6 +1,6 @@
 {
     "posts_file_hash": {
-        "mq2e3m": "7b16fce4797560dd668d2d350e6dc9245f7125348251e1c97f68168becfa733e",
+        "mq2e3m": "3e87f09644356aa21c78b2368b7a2bb76586fad0fe9a22a625de003895de20c3",
         "fhz0pb": "8734bfd5033c1cf6a0ca56ad1e16e8d427bbd01f249ebe17874b7483dd7d780f",
         "o5xdzi": "37821b6da994c292b9c7efe777d76d066f94e419ca88a8f993be22e596a847e7",
         "pkcjcc": "f3c58c5b1d801ccea77a17f89089d73e67dff4fd338563e33258a77ce61cf5d3",
@@ -213,6 +213,13 @@
     "ads_config_file_hash": "96b8aadbc48cf5ea8ab602cdf0a708de6a7f350417b3ab3e630af11e1b6d27d6",
     "qs_config_file_hash": "87d6a97c92dee8bbf8dab39b8f25c4f322e53cb8782f71714e0f5ccee7fbd8d2",
     "static_config_file_hash": "73f368b3663ce85cc3d516c0df35d7d286527327514569feab1f95119c0bfa8f",
-    "refresh_categories": [],
-    "refresh_tags": []
+    "refresh_categories": [
+        "article"
+    ],
+    "refresh_tags": [
+        "人生成长",
+        "生活",
+        "儿子",
+        "校园"
+    ]
 }
