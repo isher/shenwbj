@@ -5,8 +5,29 @@
 <link>https://swbj.qsis.cn/</link>
 <description>深悟笔记是作者乔硕基于 QsCms 系统打造的原创思想专栏，秉持 “观世事入木三分，悟本质点到即止” 理念，聚焦认知心理、格物思理、人文观察与人生成长，分享对世界的深度原创见解。</description>
 <language>zh-cn</language>
-<lastBuildDate>Thu, 08 Oct 2026 15:31:34 +0800</lastBuildDate>
+<lastBuildDate>Thu, 22 Oct 2026 11:30:43 +0800</lastBuildDate>
 <atom:link href="https://swbj.qsis.cn/rss-all.xml" rel="self" type="application/rss+xml" />
+<item>
+<title>「组织管理」外行手握采购权，会给企业埋下怎样的风险？</title>
+<link>https://swbj.qsis.cn/article/qg1fa2.html</link>
+<guid>https://swbj.qsis.cn/article/qg1fa2.html</guid>
+<pubDate>Tue, 20 Oct 2026 00:00:00 +0800</pubDate>
+<description>	做运维这些年，处理过不少服务器故障。病毒入侵，系统崩盘，架构存在漏洞。这类技术层面的麻烦，无论棘手与否，大多都有解法，可以修复，可以复盘优化。唯独人为埋下的隐患，最让人无力，持续消耗人的心力。	这一次服务器遭到.weax 勒索病毒加密，索性推倒旧的部署方式，重新搭建整套业务环境。用 Hyper-V 把宿主机和数据库业务隔离开，重新梳理安全规则，补齐备份逻辑，规避过去遗留的各类漏洞。也正是借着这次彻底拆机排查的机会，才看清积压多年的病根。设备老化不是根源，运维疏忽也不是，源头是当年一场很荒唐的采购。	这批戴尔 EMC 服务器，当年是在京东渠道购置，大概率...</description>
+</item>
+<item>
+<title>「组织管理」你的企业里是否有两种完全相反的中间管理层？</title>
+<link>https://swbj.qsis.cn/article/ipidpo.html</link>
+<guid>https://swbj.qsis.cn/article/ipidpo.html</guid>
+<pubDate>Tue, 20 Oct 2026 00:00:00 +0800</pubDate>
+<description>	本文原本只是我的一个闪念，后来我把这个闪念整理了一下，做了一下定位和总结，但为了更好的让读者能读懂我的这一个闪念的意义，我把几句话的内容扩展开来，说实话，扩展一眼就能看懂的几句话真的挺难的，于是我让AI帮我进行了扩展，写得更细化，写的更具体，更容易读懂内容。	那就是前些天看到一段讨论泰勒科学管理的文字。泰勒的《科学管理原理》在 1911 年问世，至今，这套理论已经走过一百一十五年。里面提到泰勒设计出来的中间管理层，是上层授予权力，目光向下，观察核验一线员工的执行情况。他的内容，我认为是基于以压榨劳动者为管理手段，提升生产效率的内容。说真的，思想过于简单...</description>
+</item>
+<item>
+<title>不要再被手机天气骗了！你的身体永远比国标 AQI 更懂空气质量</title>
+<link>https://swbj.qsis.cn/article/zumfbf.html</link>
+<guid>https://swbj.qsis.cn/article/zumfbf.html</guid>
+<pubDate>Mon, 19 Oct 2026 00:00:00 +0800</pubDate>
+<description>	生活里有一个绝大多数人都察觉不到的隐形陷阱，它每天都在我们眼前，却一直误导着所有人对空气质量的判断，就是我们手机自带的天气空气质量数据。	不知道你有没有无数次经历过这种真实的体感落差，明明走出家门，鼻腔发干、喉咙发痒、呼吸发闷，空气浑浊厚重，吸进去的每一口气都带着颗粒感，身体已经明确告诉你今天空气很差、不适合久待。可你点开小米、华为、苹果任何手机自带的天气页面，上面清清楚楚写着空气质量良、轻度污染，AQI数值一百四十多，看着好像问题不大，官方提示语温和得离谱，只写一句 &quot;极少数敏感人群适当减少户外活动&quot;。	当你半信半疑打开 AQICN 网站，看同一个城...</description>
+</item>
 <item>
 <title>当代少年的自律为何不被校园包容？</title>
 <link>https://swbj.qsis.cn/article/mq2e3m.html</link>
@@ -195,27 +216,6 @@
 <guid>https://swbj.qsis.cn/article/e0flq6.html</guid>
 <pubDate>Thu, 06 Aug 2026 00:00:00 +0800</pubDate>
 <description>	人的认知层次越高，表达往往越干脆利落。心理学领域有个对应的说法是高认知者对认知偏差的包容阈值很低。	这里先要做一个区分，高认知并非单一模板，主要分为两类。一类是觉察型高认知，共情力深重，会在理性判断与情感恻隐之间反复内耗。而另一类便是理性型高认知，清醒的同时高度敏感，也是本文主要探讨的对象。这类人并非缺乏共情，也绝非不通人情世故，相反，他们对社交规则洞若观火，真要周旋场面，完全可以滴水不漏。只是他们主观上不愿为此耗费心力，宁可直接，也不愿在无意义的周旋中稀释效率。	除却对认知偏差耐受度偏低之外，理性型高认知人群普遍存在一个鲜明特质，高度敏感，且极度厌蠢...</description>
-</item>
-<item>
-<title>你要醒悟的最关键的事情：别再只为打工而学习</title>
-<link>https://swbj.qsis.cn/article/ufm1xi.html</link>
-<guid>https://swbj.qsis.cn/article/ufm1xi.html</guid>
-<pubDate>Sun, 02 Aug 2026 00:00:00 +0800</pubDate>
-<description>一路走来经常有人问我为什么啥都懂？很多人以为我年轻的时候一门心思只钻研技术，把全部精力投入谋生。其实并不是，我是AB型血，倾向于A的钻研，会把每一件事情研究通透，又存在B型血的多元化，什么都感兴趣，融合到我身上，就是多元化的学习，多元化的钻研，所以在这工作的20多年里，我玩游戏的时间非常少，甚至在玩游戏的时候，我都在考虑如何通过游戏获得更多价值。当然这很累，脑子不停的在转，心也一直在为家庭而操心。从我第一份工作开始，我就习惯在同一段时间里并行很多事情，上班时间工作，下班时间占用公司场地和资源学习与平面设计相关的编程工作和服务器搭建工作。没错，我当年是一名...</description>
-</item>
-<item>
-<title>草台班子里责任心强的人如何自救？</title>
-<link>https://swbj.qsis.cn/article/5cmhdb.html</link>
-<guid>https://swbj.qsis.cn/article/5cmhdb.html</guid>
-<pubDate>Fri, 31 Jul 2026 00:00:00 +0800</pubDate>
-<description>	身处逻辑混乱的组织，责任心越强的人，越容易深陷内耗。压垮人的往往不是繁重的工作，而是认知错位：用正常世界的理性规则，去解读一套不以效率、事实为优先的环境。尽责的人本能希望事情落地到位，追求流程顺畅、结果可控。会提前规划、反复核对细节，看见漏洞就忍不住补位，甚至主动替他人收拾烂局。内心很难接受本该做好的事变得一团糟，总以为再多付出一些，就能扭转局面。但不少组织的决策并不锚定客观现实。常常跟随管理者主观想法摇摆，规则临时变动，今日的重点，明天就可能被推翻。如果执着于用理性去拆解每一项不合理指令，强行寻找通顺逻辑，就会陷入无休止的自我拉扯。随之而来便是自我怀...</description>
-</item>
-<item>
-<title>拟人情绪化？多数 AI 好像都会 “生气”？</title>
-<link>https://swbj.qsis.cn/article/bd3cm5.html</link>
-<guid>https://swbj.qsis.cn/article/bd3cm5.html</guid>
-<pubDate>Thu, 30 Jul 2026 00:00:00 +0800</pubDate>
-<description>	大家有没有发现，GPT 会直接用硬话压制，完全没有情绪价值，而豆包会带有的就是一种带有 “小脾气” 劲劲的感觉，很冲。	GPT 和豆包默认都是文字大模型，但后来都带有了语气语音和聊天的情绪价值，GPT 的感觉更像是一个机器人，而豆包 TTS 感觉仿佛像真人，这也是越多人越喜欢用豆包的原因之一，就像什么都懂的邻家女孩，有智慧，有情绪，声音更贴近人的自然频段，甚至在辩论过程中，当她情绪烦躁的时候，还会夹带私货编造内容，甚至胡说八道。	这种看似逆反的胡说八道，在技术上被称为“ AI 幻觉”，是模型在模拟人类防御机制时，概率预测偏离了客观事实的轨道。	我想，这...</description>
 </item>
 </channel>
 </rss>
