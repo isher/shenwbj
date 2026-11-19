@@ -98,7 +98,7 @@ span[title] {
 /* 卡片板块 */
 .law-category{padding:0;background:#fff;margin-bottom:30px}
 .section-title{text-align:center;font-size:1.5rem;color:#5A6F75;margin-bottom:40px;font-weight:500}
-.category-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.category-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
 .category-card{font-weight: bold;padding:30px 20px;background:#FAF9F5;border:1px solid #EAEAEA;border-radius:6px;text-align:center;transition:.3s}
 .category-card:hover{border-color:#6B8088;background:#92aeb9; box-shadow:0 3px 10px rgba(0,0,0,.04)}
 .category-card:hover, .category-card:hover h3,
@@ -113,7 +113,7 @@ span[title] {
 
 
 /* 左侧：最新发布 */
-.left-news{flex:4;}
+.left-news{flex:4 1 0;min-width:0}
 
 /* 右侧：个人介绍 */
 .right-intro{
@@ -251,6 +251,18 @@ span[title] {
 }
 /* 翻页 */
 .pagination{display:flex;justify-content:center;align-items:center;gap:12px;margin:40px 0}
+
+.pagination-active{
+    padding: 4px 10px;
+    border-radius: 4px;
+	}
+.page-item{
+    padding: 4px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-decoration: none;
+	}
+
 .page-btn{padding:8px 16px;background:#6B8088;color:#fff;border:none;border-radius:4px;cursor:pointer}
 .page-btn:hover{background:#5A6F75}
 .page-btn:disabled{background:#eee;cursor:not-allowed}
@@ -358,16 +370,18 @@ padding: 10px 0px;
   display: flex;
   justify-content: space-between; /* h3左、p右 */
   align-items: flex-end; /* 核心：两者文字底部平齐 */
+  gap: 10px;
   border-bottom: 1px solid #CCD6D9;
 color: #5A6F75;
 }
+.cate-row h3 { flex: 0 0 auto; }
+.cate-row p { flex: 1 1 auto; text-align: right; min-width: 0; }
 
 
 
 /* 分类内文章条目样式 */
 .post-item {
-    display: flex;
-    align-items: center;
+    display: block;
     width: 100%;
     font-size: 0.875rem;
     color: #5A6F75;
@@ -458,7 +472,7 @@ color: #5A6F75;
 
 /* -------- 响应式 -------- */
 @media(max-width:768px){
-  .category-grid{grid-template-columns:repeat(2,1fr)}
+  .category-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 
   .article-row{flex-direction:column}
   .post-sidebar{width:100%}
@@ -513,3 +527,64 @@ color: #5A6F75;
   .header-top .container{flex-direction:column;align-items:center;height:auto;padding:5px 0}
   .top-nav a{margin:0 10px}
 }	
+/* ---------- 首屏轮播（主题设置里的 3 张大图）：定高裁切，文字居中压在图上 ---------- */
+.banner {
+    position: relative;
+    height: 420px;
+    overflow: hidden;
+    padding: 0;
+}
+.banner .swiper-container,
+.banner .swiper-wrapper,
+.banner .swiper-slide {
+    height: 100%;
+    width: 100%;
+}
+.banner .swiper-container {
+    position: relative;
+}
+.banner .swiper-slide {
+    position: relative;
+    display: block;
+    background: #F6F4EF;
+    overflow: hidden;
+}
+.banner .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.banner .swiper-slide .banner-text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    z-index: 10;
+    color: #ffffff;
+    font-size: 1.875rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
+    padding: 0 20px;
+}
+@media (max-width: 900px) {
+    .banner { height: 300px; }
+    .banner .swiper-slide .banner-text { font-size: 1.375rem; }
+}
+@media (max-width: 600px) {
+    .banner { height: 220px; }
+    .banner .swiper-slide .banner-text { font-size: 1.125rem; letter-spacing: 0.03em; }
+}
+
+/* 分类方块区：.law-category 内层 .container 会被 .new-list .container 的 flex 规则影响，
+   变成 flex 子项后宽度按内容收缩，导致 4 块挤在左边、与右侧栏之间留出大片空白。
+   这里把它恢复成普通块级容器，让 .category-grid 撑满左栏。 */
+.law-category .container {
+    display: block;
+    width: 100%;
+    max-width: none;
+    padding: 0;
+}
